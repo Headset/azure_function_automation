@@ -34,7 +34,7 @@ sql_string_0 = """
 Insert into lizland.dukeofne.azure_function_one
 values
 (
-'azure function one'
+'azure function two'
 , current_date
 , current_timestamp
 )
