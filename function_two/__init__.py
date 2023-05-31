@@ -1,5 +1,6 @@
 import azure.functions as func
 from sqlalchemy import create_engine
+import os
 
 
 def main(mytimer: func.TimerRequest) -> None:
