@@ -17,11 +17,8 @@ def main(mytimer: func.TimerRequest) -> None:
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
 
 
-filepaths = ["C:\\Users\\harsh\\My Drive\\Folder\\Code\\3.py",
-    "C:\\Users\\harsh\\My Drive\\Folder\\Code\\4.py",
-    "C:\\Users\\harsh\\My Drive\\Folder\\Code\\5.py",
-    "C:\\Users\\harsh\\My Drive\\Folder\\Code\\Helper codes\\6.py",
-    "C:\\Users\\harsh\\My Drive\\Folder\\Code\\Process\\7.py"
+filepaths = ["AutoAnalytics\test_file\test_py_one.py",
+    "AutoAnalytics\test_file\test_py_two.py",
 ]
 
 for filepath in filepaths:
