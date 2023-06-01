@@ -1,5 +1,6 @@
 import azure.functions as func
 from sqlalchemy import create_engine
+from sqlalchemy.dialects import registry
 import os
 
 
@@ -12,6 +13,8 @@ def main(mytimer: func.TimerRequest) -> None:
 
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
 
+#add snowflake.sqlachelmy depependencies
+registry.register('snowflake', 'snowflake.sqlalchemy', 'dialect')
 
 # Create connection to snowflake db
 engine = create_engine(
