@@ -5,3 +5,4 @@
 azure-functions
 sqlalchemy
 snowflake-sqlalchemy
+snowflake-connector-python
