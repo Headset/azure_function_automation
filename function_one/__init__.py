@@ -2,6 +2,7 @@ import azure.functions as func
 from sqlalchemy import create_engine
 from sqlalchemy.dialects import registry
 import os
+import datetime
 
 
 def main(mytimer: func.TimerRequest) -> None:
