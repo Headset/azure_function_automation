@@ -3,6 +3,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.dialects import registry
 import os
 import datetime
+import logging
+
 
 
 def main(mytimer: func.TimerRequest) -> None:
