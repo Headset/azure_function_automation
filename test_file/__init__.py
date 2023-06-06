@@ -11,8 +11,8 @@ def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
         tzinfo=datetime.timezone.utc).isoformat()
     
-    run_script('test_py_one.py')
-    run_script('test_py_two.py')
+    run_script('test_py_one')
+    run_script('test_py_two')
 
     if mytimer.past_due:
         logging.info('The timer is past due!')
