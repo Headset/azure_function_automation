@@ -21,7 +21,7 @@ def main(mytimer: func.TimerRequest) -> None:
 
 
 def run_script(script_name):
-    script_path = os.path.join(os.path.dirname(__file__), f'{sn}.py')
+    script_path = os.path.join(os.path.dirname(__file__), f'{script_name}.py')
 
     s = importlib.util.spec_from_file_location(script_name, script_path)
     m = importlib.util.module_from_spec(s)
