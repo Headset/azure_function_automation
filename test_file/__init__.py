@@ -11,13 +11,14 @@ def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
         tzinfo=datetime.timezone.utc).isoformat()
     
-    run_script('test_py_one')
-    run_script('test_py_two')
-
     if mytimer.past_due:
         logging.info('The timer is past due!')
 
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
+    
+    # call function with script name in folder that you wish to run. Do not include file extension ie: ".py"
+    run_script('test_py_one')
+    run_script('test_py_two')
 
 
 def run_script(script_name):
