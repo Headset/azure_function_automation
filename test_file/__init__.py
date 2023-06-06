@@ -1,15 +1,18 @@
 import azure.functions as func
-from sqlalchemy import create_engine
-from sqlalchemy.dialects import registry
 import os
 import datetime
 import logging
-import subprocess
+import sys
+import importlib.util
+
 
 
 def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
         tzinfo=datetime.timezone.utc).isoformat()
+    
+    run_script('test_py_one.py')
+    run_script('test_py_two.py')
 
     if mytimer.past_due:
         logging.info('The timer is past due!')
@@ -17,9 +20,10 @@ def main(mytimer: func.TimerRequest) -> None:
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
 
 
-filepaths = ["AutoAnalytics\test_file\test_py_one.py",
-    "AutoAnalytics\test_file\test_py_two.py",
-]
+def run_script(script_name):
+    script_path = os.path.join(os.path.dirname(__file__), f'{sn}.py')
 
-for filepath in filepaths:
-    subprocess.call(["python", filepath])
+    s = importlib.util.spec_from_file_location(script_name, script_path)
+    m = importlib.util.module_from_spec(s)
+    sys.modules[s.name] = m
+    s.loader.exec_module(m)
