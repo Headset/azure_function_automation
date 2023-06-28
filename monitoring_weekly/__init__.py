@@ -15,3 +15,16 @@ def main(mytimer: func.TimerRequest) -> None:
         logging.info('The timer is past due!')
 
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
+
+
+    # call function with script name in folder that you wish to run. Do not include file extension ie: ".py"
+    run_script('weekly_sama_reporting')
+
+
+def run_script(script_name):
+    script_path = os.path.join(os.path.dirname(__file__), f'{script_name}.py')
+
+    s = importlib.util.spec_from_file_location(script_name, script_path)
+    m = importlib.util.module_from_spec(s)
+    sys.modules[s.name] = m
+    s.loader.exec_module(m)
