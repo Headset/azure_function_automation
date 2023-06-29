@@ -40,7 +40,6 @@ engine = create_engine(
 
 
 usedb_string = "use FIVETRAN;"
-userole_string = "use role analyst"
 usewarehouse_string = "use warehouse ANALYST_WH"
 
 
@@ -167,7 +166,6 @@ try:
     #create connection to DB and tell to use Fivetran
     connection = engine.connect()
     connection.execute(usedb_string) 
-    connection.execute(userole_string) 
     connection.execute(usewarehouse_string)
 
     print("executing query")
