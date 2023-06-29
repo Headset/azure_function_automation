@@ -6,7 +6,6 @@ import sys
 import importlib.util
 
 
-
 def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
         tzinfo=datetime.timezone.utc).isoformat()
@@ -18,7 +17,8 @@ def main(mytimer: func.TimerRequest) -> None:
 
 
     # call function with script name in folder that you wish to run. Do not include file extension ie: ".py"
-    run_script('weekly_sama_reporting')
+    #run_script('weekly_sama_reporting')
+    run_script('weekly_autolinker_100_links_audit')
 
 
 def run_script(script_name):
