@@ -155,15 +155,15 @@ try:
         ]
     )
 
-    except SparkPostAPIException as err:
-        # http response status code
-        print(err.status)
-        # python requests library response object
-        # http://docs.python-requests.org/en/master/api/#requests.Response
-        print(err.response.json())
-        # list of formatted errors
-        print(err.errors)
+except SparkPostAPIException as err:
+    # http response status code
+    print(err.status)
+    # python requests library response object
+    # http://docs.python-requests.org/en/master/api/#requests.Response
+    print(err.response.json())
+    # list of formatted errors
+    print(err.errors)
 
-    # Finally, remove files
-    os.remove(filename_1)
-    os.remove(filename_2)
+# Finally, remove files
+os.remove(filename_1)
+os.remove(filename_2)
