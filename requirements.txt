@@ -8,3 +8,4 @@ snowflake-sqlalchemy
 snowflake-connector-python
 sparkpost
 tabulate
+pandas
