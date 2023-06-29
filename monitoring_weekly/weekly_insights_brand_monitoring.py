@@ -40,7 +40,7 @@ engine = create_engine(
 
 
 usedb_string = "use FIVETRAN;"
-userole_string = "use role analyst_plus"
+userole_string = "use role analyst"
 usewarehouse_string = "use warehouse ANALYST_WH"
 
 
