@@ -205,7 +205,8 @@ if len(sql_df) > 0:
     """
     try:
         sp.transmissions.send(
-        recipients=['mlaferla@headset.io', 'plong@headset.io', 'cooper@headset.io'],
+        #recipients=['mlaferla@headset.io', 'plong@headset.io', 'cooper@headset.io'],
+        recipients=['mlaferla@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
         subject="Insights Brand Monitoring",

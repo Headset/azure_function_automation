@@ -137,7 +137,8 @@ sp = SparkPost(os.environ["SPARKPOST_KEY"])
 
 try:
     response = sp.transmissions.send(
-        recipients=['mlaferla@headset.io', 'cooper@headset.io', 'rmontenigro@headset.io', 'mfelipe@headset.io','jeniffer.aloo@nbo.samadc.org','nancy.mwangi@nbo.samadc.org','saveria.achieng@samasource.org','benjamin.ndungu@nbo.samadc.org','holuga@samasource.org'],
+        #recipients=['mlaferla@headset.io', 'cooper@headset.io', 'rmontenigro@headset.io', 'mfelipe@headset.io','jeniffer.aloo@nbo.samadc.org','nancy.mwangi@nbo.samadc.org','saveria.achieng@samasource.org','benjamin.ndungu@nbo.samadc.org','holuga@samasource.org'],
+        recipients=['mlaferla@headset.io'],
         html='Please find the Headset team\'s unlinks and flagged products attached. Reach out to cooper@headset.io with issues or questions.',
         from_email='analytics-monitor@headset.io',
         subject='Headset Weekly Flag and Unlink Export',
