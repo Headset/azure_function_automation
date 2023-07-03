@@ -31,7 +31,7 @@ dir_path = os.getcwd()
 
 engine = create_engine(
     'snowflake://{user}:{password}@{account}/'.format(
-        user=os.environ["SNOWFLAKE_USER"],
+        user=os.environ["SNOWFLAKE"],
         password=os.environ["SNOWFLAKE_PASSWORD"],
         account=os.environ["SNOWFLAKE_ACCOUNT"],
     )
