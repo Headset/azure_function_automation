@@ -48,14 +48,5 @@ files = ['weekly_sama_reporting.py',
 
 batch_execution(files)
 
-    # try:
-    #     run_script('weekly_sama_reporting.py')
-    #     run_script('weekly_autolinker_100_links_audit.py')
-    #     run_script('weekly_insights_brand_monitoring.py')
-    #     run_script('weekly_new_brand_combos.py')
-    #     run_script('weekly_new_store_monitoring.py')
-
-    # except:
-    #     print("There was a problem running a script")
 
 

@@ -91,8 +91,7 @@ if len(sql_df.count()) >0:
     """
     try:
         sp.transmissions.send(
-        #recipients=['mfelipe@headset.io', 'rmontenigro@headset.io'],
-        recipients=['mlaferla@headset.io'],
+        recipients=['mfelipe@headset.io', 'rmontenigro@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
         subject="Autolinker 100 link audit",

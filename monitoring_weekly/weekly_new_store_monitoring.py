@@ -31,7 +31,7 @@ dir_path = os.getcwd()
 
 engine = create_engine(
     'snowflake://{user}:{password}@{account}/'.format(
-        user=os.environ["SNOWFLAKE"],
+        user=os.environ["SNOWFLAKE_USER"],
         password=os.environ["SNOWFLAKE_PASSWORD"],
         account=os.environ["SNOWFLAKE_ACCOUNT"],
     )
@@ -138,8 +138,7 @@ if len(sql_df.count()) > 0:
     """
     try:
         sp.transmissions.send(
-        #recipients=['mlaferla@headset.io', 'plong@headset.io', 'cooper@headset.io'],
-        recipients=['mlaferla@headset.io'],
+        recipients=['mlaferla@headset.io', 'plong@headset.io', 'cooper@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
         subject="New Store Monitoring",
