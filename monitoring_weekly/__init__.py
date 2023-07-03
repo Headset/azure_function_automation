@@ -21,8 +21,8 @@ def main(mytimer: func.TimerRequest) -> None:
     #run_script('weekly_autolinker_100_links_audit')
     #run_script('weekly_insights_brand_monitoring')
     #run_script('weekly_new_brand_combos')
-    #run_script('weekly_new_store_monitoring')
-    
+    run_script('weekly_new_store_monitoring')
+
 
 def run_script(script_name):
     script_path = os.path.join(os.path.dirname(__file__), f'{script_name}.py')
