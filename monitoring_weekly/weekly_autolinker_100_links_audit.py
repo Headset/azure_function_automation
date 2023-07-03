@@ -78,7 +78,7 @@ finally:
 
 
 if len(sql_df.count()) >0:
-    filename = dir_path+r'\azure_results\autolinker_100_sample_audit.csv'
+    filename = dir_path+r'\autolinker_100_sample_audit.csv'
     sql_df.to_csv(filename, index = False)
 
     msgHtml = """
