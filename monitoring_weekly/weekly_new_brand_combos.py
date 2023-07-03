@@ -5,12 +5,10 @@ import string
 import time
 
 from sqlalchemy import create_engine
+from sparkpost import SparkPost
 import azure.functions as func
 import pandas as pd
 import sqlalchemy.dialects.sqlite
-
-
-from sparkpost import SparkPost
 
 
 
@@ -144,7 +142,7 @@ if len(state_df.count()) > 0 or len(cat_df.count()) > 0:
     """
     try:
         sp.transmissions.send(
-        recipients=['mlaferla@headset.io'],
+        recipients=['mfelipe@headset.io', 'rmontenigro@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
         subject="New Brand Combos",
