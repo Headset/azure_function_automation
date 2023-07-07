@@ -1,25 +1,13 @@
 import datetime
 import logging
-
-import azure.functions as func
-
-
-def main(mytimer: func.TimerRequest) -> None:
-    utc_timestamp = datetime.datetime.utcnow().replace(
-        tzinfo=datetime.timezone.utc).isoformat()
-
-    if mytimer.past_due:
-        logging.info('The timer is past due!')
-
-    logging.info('Python timer trigger function ran at %s', utc_timestamp)
-
-import pandas as pd
-from tabulate import tabulate
-from sqlalchemy import create_engine
 import os
+
+from sqlalchemy import create_engine
 from sparkpost import SparkPost
 from sparkpost.exceptions import SparkPostAPIException
-
+from tabulate import tabulate
+import pandas as pd
+import azure.functions as func
 
 
 # Create connection to snowflake db
