@@ -40,13 +40,13 @@ def batch_execution(file_list):
     return exceptions
 
 # list of scripts running in function, if adding new script add to list.
-files = ['weekly_sama_reporting.py',
+file_list = ['weekly_sama_reporting.py',
         'weekly_autolinker_100_links_audit.py',
         'weekly_insights_brand_monitoring.py',
         'weekly_new_brand_combos.py',
         'weekly_new_store_monitoring.py']
 
-batch_execution(files)
+batch_execution(file_list)
 
 
 
