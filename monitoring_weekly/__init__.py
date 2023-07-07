@@ -25,19 +25,19 @@ def run_script(script_name):
     s.loader.exec_module(m)
 
     
-def batch_execution(file_list):
+# def batch_execution(file_list):
 
-    exceptions = [] #store errors
+#     exceptions = [] #store errors
 
-    for file in file_list:
-        try:
-            run_script(file)
-        except Exception as e:
-            exceptions.append(e)
-        else: 
-            print('Success')
+#     for file in file_list:
+#         try:
+#             run_script(file)
+#         except Exception as e:
+#             exceptions.append(e)
+#         else: 
+#             print('Success')
 
-    return exceptions
+#     return exceptions
 
 # list of scripts running in function, if adding new script add to list.
 file_list = ['weekly_sama_reporting.py',
@@ -46,8 +46,9 @@ file_list = ['weekly_sama_reporting.py',
         'weekly_new_brand_combos.py',
         'weekly_new_store_monitoring.py']
 
-batch_execution(file_list)
+#batch_execution(file_list)
 
-
+for file in file_list:
+    run_script(file)
 
 
