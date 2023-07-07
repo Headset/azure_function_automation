@@ -29,7 +29,7 @@ def batch_execution(file_list):
 
     exceptions = [] #store errors
 
-    for file in files:
+    for file in file_list:
         try:
             run_script(file)
         except Exception as e:
