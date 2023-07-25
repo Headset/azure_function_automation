@@ -4,8 +4,10 @@
       {
         "name": "mytimer",
         "type": "timerTrigger",
+        "useMonitor": true,
+        "runOnStartup": false,
         "direction": "in",
-        "schedule": ""
+        "schedule": "0 5 * * MON"
       }
     ],
     "disabled": true
