@@ -25,32 +25,32 @@ def run_script(script_name):
     s.loader.exec_module(m)
 
     
-# def batch_execution(file_list):
+def batch_execution(file_list):
 
-#     exceptions = [] #store errors
+    exceptions = [] #store errors
 
-#     for file in file_list:
-#         try:
-#             run_script(file)
-#         except Exception as e:
-#             exceptions.append(e)
-#         else: 
-#             print('Success')
+    for file in file_list:
+        try:
+            run_script(file)
+        except Exception as e:
+            exceptions.append(e)
+        else: 
+            print('Success')
 
-#     return exceptions
+    return exceptions
 
-# list of scripts running in function, if adding new script add to list.
-# file_list = ['weekly_sama_reporting.py',
-#         'weekly_autolinker_100_links_audit.py',
-#         'weekly_insights_brand_monitoring.py',
-#         'weekly_new_brand_combos.py',
-#         'weekly_new_store_monitoring.py']
+#list of scripts running in function, if adding new script add to list.
+file_list = ['weekly_sama_reporting.py',
+        'weekly_autolinker_100_links_audit.py',
+        'weekly_insights_brand_monitoring.py',
+        'weekly_new_brand_combos.py',
+        'weekly_new_store_monitoring.py']
 
-#batch_execution(file_list)
+batch_execution(file_list)
 
 
-run_script('weekly_sama_reporting.py')
-run_script('weekly_autolinker_100_links_audit.py')
-run_script('weekly_insights_brand_monitoring.py')
-run_script('weekly_new_brand_combos.py')
-run_script('weekly_new_store_monitoring.py')
+# run_script('weekly_sama_reporting.py')
+# run_script('weekly_autolinker_100_links_audit.py')
+# run_script('weekly_insights_brand_monitoring.py')
+# run_script('weekly_new_brand_combos.py')
+# run_script('weekly_new_store_monitoring.py')

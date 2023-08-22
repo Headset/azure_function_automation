@@ -10,5 +10,5 @@
         "schedule": "0 5 * * MON"
       }
     ],
-    "disabled": true
+    "disabled": false
   }
