@@ -196,7 +196,7 @@ if len(sql_df) > 0:
         recipients=['mlaferla@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
-        subject="Insights Brand Monitoring",
+        subject="Insights Brand Monitoring (from azure)",
         attachments=[
             {
                 "name": filename.split('\\')[-1],

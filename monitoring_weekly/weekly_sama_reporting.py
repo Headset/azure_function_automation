@@ -129,7 +129,7 @@ try:
         recipients=['mlaferla@headset.io'],
         html='Please find the Headset team\'s unlinks and flagged products attached. Reach out to cooper@headset.io with issues or questions.',
         from_email='analytics-monitor@headset.io',
-        subject='Headset Weekly Flag and Unlink Export',
+        subject='Headset Weekly Flag and Unlink Export (from azure)',
         attachments=[
             {
                 "name": filename_1.split('\\')[-1],

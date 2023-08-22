@@ -130,7 +130,7 @@ if len(sql_df.count()) > 0:
         recipients=['mlaferla@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
-        subject="New Store Monitoring",
+        subject="New Store Monitoring (from azure)",
         attachments=[
             {
                 "name": filename.split('\\')[-1],

@@ -133,7 +133,7 @@ if len(state_df.count()) > 0 or len(cat_df.count()) > 0:
         recipients=['mlaferla@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
-        subject="New Brand Combos",
+        subject="New Brand Combos (from azure)",
         attachments=[
             {
                 "name": filename_c.split('\\')[-1],

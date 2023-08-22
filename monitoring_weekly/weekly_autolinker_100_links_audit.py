@@ -82,7 +82,7 @@ if len(sql_df.count()) >0:
         recipients=['mlaferla@headset.io'],
         html=msgHtml,
         from_email='analytics-monitor@headset.io',
-        subject="Autolinker 100 link audit",
+        subject="Autolinker 100 link audit (from azure)",
         attachments=[
             {
                 "name": filename.split('\\')[-1],
