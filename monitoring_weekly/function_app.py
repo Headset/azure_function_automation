@@ -8,7 +8,7 @@ import importlib.util
 # Azure function timer. To alter timer cadence see function.json file
 app = func.FunctionApp()
 
-@app.function_name(name="mytimer")
+@app.function_name(name="monitoring_weekly")
 @app.schedule(schedule="0 5 * * MON", 
               arg_name="mytimer",
               run_on_startup=False,
