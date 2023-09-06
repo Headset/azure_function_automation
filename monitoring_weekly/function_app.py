@@ -9,9 +9,9 @@ import importlib.util
 app = func.FunctionApp()
 
 @app.function_name(name="monitoring_weekly")
-@app.schedule(schedule="0 5 * * MON", 
+@app.schedule(schedule="0 5 * * 1", 
               arg_name="mytimer",
-              run_on_startup=False,
+              run_on_startup=True,
               use_monitor=True) 
 
 def main(mytimer: func.TimerRequest) -> None:

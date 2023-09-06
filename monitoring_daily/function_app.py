@@ -10,7 +10,7 @@ import importlib.util
 app = func.FunctionApp()
 
 @app.function_name(name="monitoring_daily")
-@app.schedule(schedule="0 5 * * MON", 
+@app.schedule(schedule="0 5 * * 1-5", 
               arg_name="mytimer",
               run_on_startup=False,
               use_monitor=True) 
