@@ -3,8 +3,10 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-datetime 
-logging
-sys
+sqlalchemy
+snowflake-sqlalchemy
+snowflake-connector-python
+sparkpost
+tabulate
+pandas
 importlib
-
