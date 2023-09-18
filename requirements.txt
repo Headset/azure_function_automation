@@ -9,4 +9,3 @@ snowflake-connector-python
 sparkpost
 tabulate
 pandas
-importlib
